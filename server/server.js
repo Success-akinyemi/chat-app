@@ -18,7 +18,8 @@ const server = require('http').createServer(app);
 const PORT = 5001;
 const io = require('socket.io')(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://chimerical-travesseiro-c18bde.netlify.app/',
+        //'http://localhost:3000',
         methods: ['GET', 'POST']
     }
 })
