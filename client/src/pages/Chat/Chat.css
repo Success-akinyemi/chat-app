@@ -1,0 +1,76 @@
+.chat{
+    display: flex;
+    flex-direction: column;
+    width: 96vw;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 87vh;
+    position: relative;
+}
+
+.chat .container{
+    display: flex;
+    gap: 10px;
+    height: 80vh;
+}
+
+.chat .btn{
+    width: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.chat .openbtn,
+.chat .closebtn{
+    font-size: 40px;
+}
+
+.chat .container .left{
+    flex: 4;
+}
+
+.chat .container .right{
+    flex: 8;
+}
+
+@media only  screen and (max-width: 650px) {
+    .chat{
+        flex-direction: column;
+    }
+
+    .container{
+
+    }
+
+    .chat .left{
+        position: fixed;
+        top: 0;
+        height: 100%;
+        width: 90%;
+        transition: width 1s;
+        background: white;
+        z-index: 100;
+        margin-top: 15%;
+    }
+
+    .chat .btn{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .responsive_nav{
+        width: 0;
+        height: 80%;
+        margin-top: 5%;
+         z-index: 100;
+    }
+
+    .responsive_nav.show{
+        display: none;
+        transition: all 1s ease;
+    }
+}

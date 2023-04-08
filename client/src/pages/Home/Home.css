@@ -1,0 +1,32 @@
+.home{
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 90vh;
+}
+
+.home_container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.home_container p{
+    font-size: 40px;
+}
+
+.home .home_container .home_link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    background: green;
+    padding: 10px 20px;
+    width: 200px;
+    border-radius: 10px;
+    color: white;
+}

@@ -1,0 +1,108 @@
+.sidebar{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sidebar .rooms{
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 20px;
+}
+
+.sidebar .rooms h2{
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 1px solid black;
+}
+
+.sidebar .rooms li{
+    list-style-type: none;
+    padding: 10px 0;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+    display: flex;
+    position: relative;
+}
+
+.sidebar .rooms li.active{
+    background: rgb(75, 228, 233);
+
+}
+
+.sidebar .badge{
+    position: absolute;
+    right: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    background: blue;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+}
+
+.sidebar .rooms li.disabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.sidebar .rooms li:hover{
+    background: lightcyan;
+
+}
+
+.sidebar .rooms li:last-child{
+    border-bottom: none;
+}
+
+.sidebar .rooms .user_profile{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    position: relative;
+
+}
+
+.sidebar .rooms .user_profile .user_profile_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sidebar .rooms .user_profile i{
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    width: 10px;
+    height: 10px;
+    z-index: 99;
+}
+
+.sidebar .rooms .user_profile i .offline,
+.sidebar .rooms .user_profile i .online{
+    width: 100%;
+    height: 100%;
+}
+
+.sidebar .rooms .user_profile i .offline{
+    color: orange;
+}
+
+.sidebar .rooms .user_profile i .online{
+    color: green;
+}
+
+
+.sidebar .member_list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
