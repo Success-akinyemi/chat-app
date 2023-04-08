@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { AppContext } from '../../context/appContext'
 import { addNotifications, resetNotifications} from '../../features/userSlice'
 import CircleIcon from '@mui/icons-material/Circle';
+<pre>{process.env.REACT_APP_SERVER}</pre>
 
 function Sidebar() {
     const user = useSelector((state) => state.user)
@@ -45,7 +46,7 @@ function Sidebar() {
     })
 
     function getRooms(){
-        fetch('http://localhost:5001/rooms')
+        fetch(process.env.REACT_APP_SERVER + '/rooms')
             .then((res) => res.json())
             .then((data) => setRooms(data))
     }
